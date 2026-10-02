@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*/*/.ipynb_checkpoints/
+
+# Environment variables & secrets
+.env
+.env.*
+*.env
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Large Raw & Processed Datasets (> 100 MB GitHub limit)
+*.parquet
+processed_base.csv
+processed_spatial.csv
+processed_weekly.csv
+data/processed_weekly.csv
+data/train_timeseries.csv
+data/test_timeseries.csv
+data/validation_timeseries.csv
+dataset1/train_timeseries.parquet
+dataset1/weekly_texas_classification.csv
+dataset1/labeled_drought_data.csv
+dataset1/labeled_drought_data.parquet
+dataset1/dataset1/
+dataset1/WEF_Future_of_Jobs_Report_2025.pdf
+
+# Generated Heavy Media & Visualizations (> 100 MB)
+Texas_Drought_Animation.html
+
+# Large Machine Learning Model Binaries (> 100 MB GitHub limit)
+# The models/ directory structure is preserved with .gitkeep and documentation
+models/*.pkl
+saved_models/
+*.pkl
+
+# Caches and Temporary Files
+*.log
+untit
+weather.ipnb
+data/prediction_cache.csv
+data/weather_cache.csv
