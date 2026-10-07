@@ -14,8 +14,15 @@ BASE_DIR = os.path.dirname(
 
 DATA_PATH = os.path.join(
     BASE_DIR,
+    "data",
+    "processed",
     "processed_weekly.csv"
 )
+if not os.path.exists(DATA_PATH):
+    DATA_PATH = os.path.join(
+        BASE_DIR,
+        "processed_weekly.csv"
+    )
 
 
 # ============================================================

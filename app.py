@@ -4,6 +4,7 @@
 # Texas Drought Prediction Dashboard
 # ============================================================
 
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -27,7 +28,11 @@ st.set_page_config(
 # PATHS
 # ============================================================
 
-DATA_FILE = "processed_weekly.csv"
+DATA_FILE = (
+    os.path.join("data", "processed", "processed_weekly.csv")
+    if os.path.exists(os.path.join("data", "processed", "processed_weekly.csv"))
+    else "processed_weekly.csv"
+)
 
 GEOJSON_FILE = "data/texas_geojson.json"
 

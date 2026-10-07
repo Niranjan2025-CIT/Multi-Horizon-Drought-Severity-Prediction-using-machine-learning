@@ -46,20 +46,30 @@
 │   ├── prediction_pipeline.py  # End-to-end inference & feature assembly
 │   ├── usdm.py                 # Live/historical USDM data retrieval
 │   ├── weather.py              # Open-Meteo weather client & rolling aggregations
-│   └── neighbours.py           # Spatial county adjacency & neighbor analysis
-├── data/                       # County metadata, adjacency matrices & soil datasets
+│   ├── neighbours.py           # Spatial county adjacency & neighbor analysis
+│   └── historical.py           # Historical drought trend querying
+├── models/                     # Production Random Forest models
+│   ├── model_1w.pkl            # 1-week ahead horizon
+│   ├── model_2w.pkl            # 2-week ahead horizon
+│   ├── model_3w.pkl            # 3-week ahead horizon
+│   ├── model_4w.pkl            # 4-week ahead horizon
+│   └── experiments/            # Older and experimental model weights
+├── data/                       # Production datasets & county geospatial metadata
+│   ├── raw/                    # Raw multi-year time-series CSVs & parquets
+│   ├── processed/              # Aggregated weekly features & clean datasets
 │   ├── county_neighbors.json   # Precomputed Texas county graph adjacency
 │   ├── soil_data.csv           # County-level soil composition features
 │   ├── texas_county_locations.csv # Latitude/longitude centroids
 │   └── texas_geojson.json      # Texas county polygon boundaries
-├── models/                     # Directory for multi-horizon serialized models
-│   ├── README.md               # Model descriptions & specifications
-│   └── .gitkeep
-├── prep.ipynb                  # Data preparation & aggregation pipeline
-├── preprocess.ipynb            # Feature extraction & scaling
-├── vis_val.ipynb               # Visualization & model validation
-├── requirements.txt            # Python dependencies
-└── .gitignore                  # Git exclusions for large datasets & temp files
+├── notebooks/                  # Jupyter notebooks organized by phase
+│   ├── training/               # Data prep & feature engineering pipelines
+│   ├── analysis/               # Validation & visualization workflows
+│   └── experiments/            # Baseline models & meteorology exploration
+├── outputs/                    # Exported predictions, maps & charts
+├── docs/                       # Project documentation & architecture
+├── tests/                      # Automated system integrity tests
+├── _ARCHIVE/                   # Deduplicated historical files & old test stubs
+└── _UNRELATED_REVIEW/          # External artifacts flagged for review
 ```
 
 ---
